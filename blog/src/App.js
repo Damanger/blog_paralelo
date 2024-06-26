@@ -3930,7 +3930,7 @@ const App = () => {
                 </td>
             </tr>
                         </table>
-                        <p className='datos'> Los datos resultantes están en milésimas de segundos </p>
+                        <p className='datos'> Los datos resultantes están en segundos </p>
                     </div>
                     <h2>Gráficas de Ejecución En Fedora Sin OMP</h2>
                     <img src="./grafica3.webp" alt="Gráfica 3" />
