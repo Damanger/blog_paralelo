@@ -3930,7 +3930,7 @@ const App = () => {
                 </td>
             </tr>
                         </table>
-                        <p className='datos'> Los datos resultantes están en segundos </p>
+                        <p className='datos'> Los datos resultantes están en milésimas de segundos </p>
                     </div>
                     <h2>Gráficas de Ejecución En Fedora Sin OMP</h2>
                     <img src="./grafica3.webp" alt="Gráfica 3" />
@@ -3945,6 +3945,7 @@ const App = () => {
                     <div className='codigo'>
                         <pre>
                             <code>
+                            <strong><h2>Windows</h2></strong>
                                 {`#include "BMP.h"
 
 BMP::BMP(const char* name)
@@ -4177,6 +4178,66 @@ void BMP::setPixel(int x, int y, Color color)
 	pImageData[(y * header.width * 3) + (x * 3) + 2] = color.r;
 }
                                 `}
+                            </code>
+                            <code>
+                                <strong><h2>Linux</h2></strong>
+                                {`#include <stdio.h>
+#include <stdlib.h>
+#include <sys/time.h>
+#include "BMP.h"
+#include <omp.h>
+
+#define NUM_THREADS 2 // Puedes cambiar este valor a 2, 4, u 8 según la prueba
+
+void fromRGBtoGRAY_OpenMP(BMP* bmp) {
+    int i, j;
+    #pragma omp parallel for num_threads(NUM_THREADS) private(i, j)
+    for (i = 0; i < bmp->height; ++i) {
+        for (j = 0; j < bmp->width; ++j) {
+            Pixel pixel = bmp->getPixel(i, j);
+            unsigned char gray = (unsigned char)(0.3 * pixel.r + 0.59 * pixel.g + 0.11 * pixel.b);
+            pixel.r = gray;
+            pixel.g = gray;
+            pixel.b = gray;
+            bmp->setPixel(i, j, pixel);
+        }
+    }
+}
+
+double timeval_diff(struct timeval *a, struct timeval *b) {
+    return (double)(a->tv_sec + a->tv_usec / 1000000.0) - (double)(b->tv_sec + b->tv_usec / 1000000.0);
+}
+
+int main(int argc, char** argv)
+{
+    struct timeval t_ini, t_fin;
+    double secs;
+    BMP bmp("nature.bmp");
+
+    gettimeofday(&t_ini, NULL);
+
+    fromRGBtoGRAY_OpenMP(&bmp);
+
+    gettimeofday(&t_fin, NULL);
+
+    secs = timeval_diff(&t_fin, &t_ini);
+    printf("%.10g\n", secs * 1000.0);
+
+    // Guardar el tiempo en un archivo
+    FILE *time_file = fopen("tiempos.txt", "a");
+    if (time_file != NULL) {
+        fprintf(time_file, "Tiempo de ejecución: %.10g ms\n", secs * 1000.0);
+        fclose(time_file);
+    } else {
+        perror("No se pudo abrir el archivo de tiempos");
+    }
+
+    bmp.save("gris.bmp");
+
+    return 0;
+}
+
+`}
                             </code>
                         </pre>
                     </div>
