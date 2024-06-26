@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\marib\\OneDrive\\Documentos\\BMP24bitsW\\BMP24bitsW\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF1DD15-B121-4BA8-8CAA-82520CA77EE8}|BMP24bitsW.vcxproj|C:\\Users\\marib\\OneDrive\\Documentos\\BMP24bitsW\\BMP24bitsW\\BMP.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1CF1DD15-B121-4BA8-8CAA-82520CA77EE8}|BMP24bitsW.vcxproj|solutionrelative:BMP.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF1DD15-B121-4BA8-8CAA-82520CA77EE8}|BMP24bitsW.vcxproj|C:\\Users\\marib\\OneDrive\\Documentos\\BMP24bitsW\\BMP24bitsW\\BMP24bitsW.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1CF1DD15-B121-4BA8-8CAA-82520CA77EE8}|BMP24bitsW.vcxproj|solutionrelative:BMP24bitsW.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BMP.cpp",
+              "DocumentMoniker": "C:\\Users\\marib\\OneDrive\\Documentos\\BMP24bitsW\\BMP24bitsW\\BMP.cpp",
+              "RelativeDocumentMoniker": "BMP.cpp",
+              "ToolTip": "C:\\Users\\marib\\OneDrive\\Documentos\\BMP24bitsW\\BMP24bitsW\\BMP.cpp",
+              "RelativeToolTip": "BMP.cpp",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAUwJEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-22T04:35:15.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BMP24bitsW.cpp",
+              "DocumentMoniker": "C:\\Users\\marib\\OneDrive\\Documentos\\BMP24bitsW\\BMP24bitsW\\BMP24bitsW.cpp",
+              "RelativeDocumentMoniker": "BMP24bitsW.cpp",
+              "ToolTip": "C:\\Users\\marib\\OneDrive\\Documentos\\BMP24bitsW\\BMP24bitsW\\BMP24bitsW.cpp",
+              "RelativeToolTip": "BMP24bitsW.cpp",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAABsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-22T03:50:10.949Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
